@@ -5,6 +5,9 @@
 A modern and responsive Indian restaurant website designed for **𝕊𝔸ℕ𝔻ℍ𝕌 𝔻ℍ𝔸𝔹ℍ𝔸** — bringing authentic dhaba-style food, a smooth ordering experience and a clean modern interface together in one place. 🍛✨
 
 ---
+## 🚀 Live Demo
+[Live Demo](https://sandhu-dhaba.onrender.com)
+
 
 ## 🌟 Features
 
@@ -47,6 +50,20 @@ A modern and responsive Indian restaurant website designed for **𝕊𝔸ℕ𝔻
 - 🎯 CSS Animations & Hover Effects
 
 ---
+
+Developer
+Anmol Singh Sandhu
+🎓 BCA Student
+💻 Frontend Web Developer
+🐍 Learning Python & Data Analytics
+
+❤️ About 𝕊𝔸ℕ𝔻ℍ𝕌 𝔻ℍ𝔸𝔹ℍ𝔸
+𝕊𝔸ℕ𝔻ℍ𝕌 𝔻ℍ𝔸𝔹ℍ𝔸 is a frontend restaurant website project created to provide a modern digital experience for an authentic Indian dhaba.
+🍛 Fresh Food • Desi Flavours • Modern Experience
+
+⭐ Support
+If you like this project, feel free to ⭐ the repository and explore the live website!
+
 
 ## 📂 Project Structure
 
