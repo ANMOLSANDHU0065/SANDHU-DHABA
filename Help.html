@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- SANDHU -->
+  <title>Help Center | 𝕊𝔸ℕ𝔻ℍ𝕌 𝔻ℍ𝔸𝔹ℍ𝔸</title>
+
+  <style>
+    :root {
+      --bg: #ffffff;
+      --card: rgba(255, 255, 255, 0.82);
+      --text: #171717;
+      --muted: #707070;
+      --border: #e8e8e8;
+      --input: #fafafa;
+      --red: #e63946;
+      --red-dark: #c92f3b;
+      --shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+    }
+
+/* ANMOL SANDHU */
+    body.dark {
+      --bg: #0d0d0d;
+      --card: rgba(25, 25, 25, 0.88);
+      --text: #ffffff;
+      --muted: #a5a5a5;
+      --border: #303030;
+      --input: #151515;
+      --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      transition: background 0.4s ease, color 0.4s ease;
+      overflow-x: hidden;
+    }
+
+    /* ================= BACKGROUND ================= */
+
+    .bg-circle {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(2px);
+      pointer-events: none;
+      z-index: -1;
+      transition: 0.4s;
+    }
+
+    .circle-one {
+      width: 280px;
+      height: 280px;
+      background: rgba(230, 57, 70, 0.08);
+      top: -100px;
+      left: -80px;
+    }
+/* ANMOL SANDHU */
+
+    .circle-two {
+      width: 350px;
+      height: 350px;
+      background: rgba(255, 180, 0, 0.07);
+      right: -120px;
+      bottom: -130px;
+    }
+
+    /* ================= NAVBAR ================= */
+
+    .topbar {
+      max-width: 1200px;
+      margin: auto;
+      padding: 22px 25px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: var(--red);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+/* ANMOL SANDHU */
+
+    .theme-btn,
+    .home-btn {
+      border: 1px solid var(--border);
+      background: var(--card);
+      color: var(--text);
+      width: 43px;
+      height: 43px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      transition: 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+
+    .home-btn {
+      width: auto;
+      padding: 0 17px;
+      border-radius: 22px;
+      font-size: 13px;
+      text-decoration: none;
+    }
+
+    .theme-btn:hover,
+    .home-btn:hover {
+      border-color: var(--red);
+      color: var(--red);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(230, 57, 70, 0.12);
+    }
+
+    /* ================= MAIN ================= */
+/* ANMOL SANDHU */
+
+    .main {
+      max-width: 1150px;
+      margin: auto;
+      padding: 35px 25px 70px;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 45px;
+      animation: fadeUp 0.7s ease;
+    }
+
+    .help-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 8px 15px;
+      border-radius: 30px;
+      background: rgba(230, 57, 70, 0.08);
+      color: var(--red);
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 17px;
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 6vw, 64px);
+      line-height: 1;
+      letter-spacing: -2px;
+      margin-bottom: 17px;
+    }
+/* ANMOL SANDHU */
+
+    .hero h1 span {
+      color: var(--red);
+    }
+
+    .hero p {
+      max-width: 620px;
+      margin: auto;
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    /* ================= CONTENT ================= */
+
+    .content {
+      display: grid;
+      grid-template-columns: 0.75fr 1.35fr;
+      gap: 25px;
+      align-items: stretch;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(15px);
+      transition: 0.4s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+/* ANMOL SANDHU */
+
+    /* ================= LEFT CARD ================= */
+
+    .support-card {
+      padding: 30px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .support-card::after {
+      content: "";
+      position: absolute;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: rgba(230, 57, 70, 0.06);
+      right: -70px;
+      top: -70px;
+    }
+
+    .support-card h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .support-card > p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+      margin-bottom: 25px;
+    }
+
+    .support-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 15px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      margin-bottom: 12px;
+      transition: 0.3s ease;
+    }
+/* ANMOL SANDHU */
+
+    .support-item:hover {
+      transform: translateX(6px);
+      border-color: rgba(230, 57, 70, 0.4);
+      background: rgba(230, 57, 70, 0.04);
+    }
+
+    .support-icon {
+      width: 43px;
+      height: 43px;
+      min-width: 43px;
+      border-radius: 12px;
+      background: rgba(230, 57, 70, 0.09);
+      color: var(--red);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 19px;
+    }
+
+    .support-item small {
+      display: block;
+      color: var(--muted);
+      margin-bottom: 4px;
+      font-size: 11px;
+    }
+
+    .support-item strong {
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    /* ================= FORM CARD ================= */
+
+    .form-card {
+      padding: 32px;
+    }
+/* ANMOL SANDHU */
+
+    .form-heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 25px;
+    }
+
+    .form-heading h2 {
+      font-size: 24px;
+    }
+
+    .form-heading span {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .field {
+      margin-bottom: 17px;
+    }
+
+    .field label {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
+    .field input,
+    .field select,
+    .field textarea {
+      width: 100%;
+      border: 1px solid var(--border);
+      background: var(--input);
+      color: var(--text);
+      padding: 13px 14px;
+      border-radius: 11px;
+      outline: none;
+      font-size: 13px;
+      transition: 0.3s ease;
+    }
+/* ANMOL SANDHU */
+
+    .field input::placeholder,
+    .field textarea::placeholder {
+      color: #999;
+    }
+
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus {
+      border-color: var(--red);
+      box-shadow: 0 0 0 4px rgba(230, 57, 70, 0.08);
+      transform: translateY(-1px);
+    }
+
+    .field textarea {
+      min-height: 115px;
+      resize: vertical;
+    }
+
+    /* ================= FEEDBACK ================= */
+/* ANMOL SANDHU */
+
+    .rating-title {
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 9px;
+    }
+
+    .rating {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .rating label {
+      cursor: pointer;
+    }
+
+    .rating input {
+      display: none;
+    }
+
+    .rating span {
+      display: block;
+      padding: 9px 13px;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      color: var(--muted);
+      font-size: 12px;
+      transition: 0.3s ease;
+    }
+
+    .rating label:hover span,
+    .rating input:checked + span {
+      background: var(--red);
+      color: #fff;
+      border-color: var(--red);
+      transform: translateY(-2px);
+    }
+
+    /* ================= BUTTON ================= */
+
+    .submit-btn {
+      position: relative;
+      width: 100%;
+      border: none;
+      padding: 15px;
+      border-radius: 12px;
+      background: var(--red);
+      color: white;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      overflow: hidden;
+      transition: 0.35s ease;
+    }
+
+    .submit-btn::before {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 100%;
+      left: 50%;
+      top: 0;
+      background: var(--red-dark);
+      transition: 0.35s ease;
+      z-index: 0;
+    }
+
+    .submit-btn:hover::before {
+      width: 100%;
+      left: 0;
+    }
+
+    .submit-btn span {
+      position: relative;
+      z-index: 1;
+    }
+
+    .submit-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 25px rgba(230, 57, 70, 0.25);
+    }
+
+    /* ================= FOOTER ================= */
+/* ANMOL SANDHU */
+
+    .footer-note {
+      text-align: center;
+      margin-top: 28px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    /* ================= ANIMATION ================= */
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .support-card,
+    .form-card {
+      animation: fadeUp 0.8s ease;
+    }
+
+    /* ================= MOBILE ================= */
+
+    @media (max-width: 800px) {
+
+      .content {
+        grid-template-columns: 1fr;
+      }
+
+      .topbar {
+        padding: 18px;
+      }
+
+      .main {
+        padding: 25px 18px 50px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .hero {
+        margin-bottom: 30px;
+      }
+
+      .hero h1 {
+        letter-spacing: -1px;
+      }
+
+      .support-card,
+      .form-card {
+        padding: 23px;
+      }
+    }
+
+    @media (max-width: 450px) {
+
+      .logo {
+        font-size: 17px;
+      }
+
+      .home-btn {
+        display: none;
+      }
+
+      .rating {
+        flex-wrap: wrap;
+      }
+    }
+
+
+
+
+/* ---- FOOTER ---- */
+
+
+
+footer {
+  background: var(--text);
+  color: rgba(255,255,255,0.85);
+  padding: 60px 6% 0;
+  margin-top: 60px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 40px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgb(225, 218, 218);
+}
+.footer-brand .brand-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 12px;
+}
+.footer-brand .brand-name span { color: var(--accent); }
+.footer-brand p { font-size: 0.88rem; line-height: 1.7; opacity: 0.75; max-width: 280px; }
+
+.footer-col h4 { font-size: 0.9rem; font-weight: 700; color: #fff; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 16px; }
+.footer-col ul li { margin-bottom: 10px; }
+.footer-col ul li a { font-size: 0.88rem; opacity: 0.75; transition: var(--transition); }
+.footer-col ul li a:hover { opacity: 1; color: var(--accent); }
+
+.footer-contact li {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  font-size: 0.88rem;
+  opacity: 0.8;
+}
+.footer-contact li .icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 1px; }
+
+.social-links { display: flex; gap: 12px; margin-top: 20px; }
+.social-link {
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  background: rgb(239, 238, 238);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  transition: var(--transition);
+}
+.social-link:hover { background: var(--primary); transform: translateY(-3px); }
+
+.footer-bottom {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.82rem;
+  opacity: 0.6;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+
+
+footer a {
+  color: #e8e1e1;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #eee9ea;
+}
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Background Effects -->
+  <div class="bg-circle circle-one"></div>
+  <div class="bg-circle circle-two"></div>
+
+
+  <!-- NAVBAR -->
+  <header class="topbar">
+
+    <div class="logo">
+      𝕊𝔸ℕ𝔻ℍ𝕌 <span>𝔻ℍ𝔸𝔹ℍ𝔸</span>
+    </div>
+
+    <div class="nav-actions">
+
+      <a href="index.html" class="home-btn">
+        ← Back Home
+      </a>
+
+      <button class="theme-btn" id="themeBtn" aria-label="Toggle theme">
+        ☾
+      </button>
+
+    </div>
+
+  </header>
+
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <!-- HERO -->
+    <section class="hero">
+
+      <div class="help-badge">
+        ✦ Customer Support
+      </div>
+
+      <h1>
+        How Can We <span>Help?</span>
+      </h1>
+
+      <p>
+        Have a problem, suggestion or feedback?
+        Tell us what's on your mind and we'll be happy to help.
+      </p>
+
+    </section>
+
+
+    <!-- CONTENT -->
+    <section class="content">
+
+
+      <!-- SUPPORT INFO -->
+      <div class="card support-card">
+
+        <h2>We're Here For You</h2>
+
+        <p>
+          Whether it's an order issue, food feedback or website problem,
+          just let us know. Your experience matters to us.
+        </p>
+
+
+        <div class="support-item">
+
+          <div class="support-icon">☎</div>
+
+          <div>
+            <small>Call Us</small>
+            <strong>+91 6263171727</strong>
+          </div>
+
+        </div>
+
+
+        <div class="support-item">
+
+          <div class="support-icon">✉</div>
+
+          <div>
+            <small>Email Support</small>
+            <strong>info@sandhudhabha.in</strong>
+          </div>
+
+        </div>
+<!-- SANDHU -->
+
+        <div class="support-item">
+
+          <div class="support-icon">◷</div>
+
+          <div>
+            <small>Available</small>
+            <strong>Open Daily: 6 AM – 11 PM</strong>
+          </div>
+
+        </div>
+
+
+        <div class="support-item">
+
+          <div class="support-icon">♥</div>
+
+          <div>
+            <small>Your Feedback</small>
+            <strong>Helps us serve you better</strong>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- FORM -->
+      <div class="card form-card">
+
+        <div class="form-heading">
+
+          <h2>Send Us a Message</h2>
+
+          <span>* Required fields</span>
+
+        </div>
+
+<!-- SANDHU -->
+        <form id="helpForm">
+
+          <div class="form-row">
+
+            <div class="field">
+              <label>First Name *</label>
+              <input
+                type="text"
+                placeholder="Your first name"
+                required>
+            </div>
+
+            <div class="field">
+              <label>Last Name *</label>
+              <input
+                type="text"
+                placeholder="Your last name"
+                required>
+            </div>
+
+          </div>
+
+
+          <div class="form-row">
+
+            <div class="field">
+              <label>Email Address *</label>
+              <input
+                type="email"
+                placeholder="you@example.com"
+                required>
+            </div>
+
+            <div class="field">
+              <label>Phone Number *</label>
+              <input
+                type="tel"
+                placeholder="+91 XXXXX XXXXX"
+                required>
+            </div>
+
+          </div>
+
+<!-- SANDHU -->
+          <div class="field">
+
+            <label>What can we help you with? *</label>
+
+            <select required>
+
+              <option value="">Choose an issue</option>
+              <option>Order Problem</option>
+              <option>Payment Problem</option>
+              <option>Food Quality</option>
+              <option>Delivery Problem</option>
+              <option>Website Problem</option>
+              <option>Suggestion</option>
+              <option>Other</option>
+
+            </select>
+
+          </div>
+
+
+          <div class="field">
+
+            <label>Tell Us More *</label>
+
+            <textarea
+              placeholder="Describe your problem, suggestion or experience..."
+              required></textarea>
+
+          </div>
+
+
+          <div class="rating-title">
+            How was your food experience?
+          </div>
+
+          <div class="rating">
+
+            <label>
+              <input type="radio" name="rating" value="Excellent">
+              <span>Excellent</span>
+            </label>
+<!-- SANDHU -->
+            <label>
+              <input type="radio" name="rating" value="Good">
+              <span>Good</span>
+            </label>
+
+            <label>
+              <input type="radio" name="rating" value="Average">
+              <span>Average</span>
+            </label>
+
+            <label>
+              <input type="radio" name="rating" value="Poor">
+              <span>Needs Work</span>
+            </label>
+
+          </div>
+
+
+          <button type="submit" class="submit-btn">
+            <span>Send Request →</span>
+          </button>
+
+        </form>
+
+      </div>
+
+    </section>
+  </main>
+
+<!-- !-- Footer -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand-name">𝕊𝔸ℕ𝔻ℍ𝕌 <span>𝔻ℍ𝔸𝔹ℍ𝔸</span> 🍛</div>
+        <p>Bringing the authentic taste of Indian dhabas to your home. Made fresh, delivered fast, with love from Punjab.</p>
+
+        <!-- SANDHU -->
+        <div class="social-links">
+  <a class="social-link" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">◎</a>
+
+  <a class="social-link" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">f</a>
+
+  <a class="social-link" href="https://twitter.com/" target="_blank" rel="noopener noreferrer" aria-label="Twitter">𝕏</a>
+
+  <a class="social-link" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube">▶</a>
+</div>
+      </div>
+
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="cart.html">My Cart</a></li>
+          <li><a href="checkout.html">Checkout</a></li>
+        </ul>
+
+
+      </div> 
+      <div class="footer-col">
+
+
+       <h4>Categories</h4>
+<ul>
+  <li><a href="#">Special Combos</a></li>
+    <li><a href="#">Starters</a></li>
+  <li><a href="#">Snacks</a></li>
+  <li><a href="#">Drinks</a></li>
+  <li><a href="#">Sweets</a></li>
+</ul>
+
+
+<!-- SANDHU -->
+      </div> 
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <ul class="footer-contact">
+          <li><span class="icon">📍</span> 2nd Floor, Jainam Complex, Nehru Nagar East, Bhilai</li>
+          <li><span class="icon">📞</span> +91 62631 71727</li>
+          <li><span class="icon">📞</span> +91 88275 90965</li>
+          <li><span class="icon">📧</span> info@sandhudhabha.in</li>
+          <li><span class="icon">⏰</span> Open Daily: 6 AM – 11 PM</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+<span>© 2026 𝕊𝔸ℕ𝔻ℍ𝕌 𝔻ℍ𝔸𝔹ℍ𝔸. Made with ❤️ & a lot of desi love.</span>
+<span>Privacy Policy · Terms & Conditions · Refund Policy</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- DARK / LIGHT MODE -->
+  <script>
+// SANDHU
+    const themeBtn = document.getElementById("themeBtn");
+
+    const savedTheme = localStorage.getItem("sandhuTheme");
+
+    if (savedTheme === "dark") {
+      document.body.classList.add("dark");
+      themeBtn.textContent = "☀";
+    }
+
+    themeBtn.addEventListener("click", () => {
+
+      document.body.classList.toggle("dark");
+
+      const isDark = document.body.classList.contains("dark");
+
+      themeBtn.textContent = isDark ? "☀" : "☾";
+
+      localStorage.setItem(
+        "sandhuTheme",
+        isDark ? "dark" : "light"
+      );
+
+    });
+
+
+    /* Demo Submit */
+
+    document.getElementById("helpForm").addEventListener("submit", function(e) {
+
+      e.preventDefault();
+
+      alert("Thank you! Your request has been received. ❤️");
+
+      this.reset();
+    });
+
+
+
+  </script>
+</body>
+</html>
